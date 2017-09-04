@@ -1,5 +1,16 @@
 1.) Subscriptions in and out exchange
+
 2.) 1w doesnt work in RPi.GPIO (see test.py)
+
 3.) last state after restart (monitor,mosquitto,fhem)
+Loesung ueber MySwitch
+define mys MySwitch
+attr mys FuncGet {ReadingsVal("MQTT_8_Pin36","in",0)}
+attr mys FuncSet set MQTT_8_Pin36 out
+attr mys INTERVAL 20
+attr mys room MQTT
+attr mys stateFormat I: ist S: soll E: error
+
 3a) can client get the last state/message or must monitor restart after fhem-client is connected
+
 4.) Change Pin-State from OUT to IN (at now start with IN, when calling set - switch to OUT, but doesnot go back to IN)
