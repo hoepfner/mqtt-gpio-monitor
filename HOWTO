@@ -1,0 +1,6 @@
+
+pi@raspberrypi:~/mqtt-monitor/mqtt-gpio-monitor-master $ mosquitto_sub -v  -h 192.168.1.8 -t '#'
+
+
+pi@raspberrypi:~/mqtt-monitor/mqtt-gpio-monitor-master $ mosquitto_pub -h 192.168.1.8 -t '/mqtt-gpio-monitor/in/36' -m '1'
+pi@raspberrypi:~/mqtt-monitor/mqtt-gpio-monitor-master $ mosquitto_pub -h 192.168.1.8 -t '/mqtt-gpio-monitor/in/36' -m '0'
