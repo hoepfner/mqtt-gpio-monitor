@@ -14,3 +14,5 @@ attr mys stateFormat I: ist S: soll E: error
 3a) can client get the last state/message or must monitor restart after fhem-client is connected
 
 4.) Change Pin-State from OUT to IN (at now start with IN, when calling set - switch to OUT, but doesnot go back to IN)
+
+5.) OUTPUT_PINS ins ini-File aufnehmen
