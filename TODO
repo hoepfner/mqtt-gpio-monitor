@@ -2,3 +2,4 @@
 2.) 1w doesnt work in RPi.GPIO (see test.py)
 3.) last state after restart (monitor,mosquitto,fhem)
 3a) can client get the last state/message or must monitor restart after fhem-client is connected
+4.) Change Pin-State from OUT to IN (at now start with IN, when calling set - switch to OUT, but doesnot go back to IN)
