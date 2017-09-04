@@ -1,6 +1,20 @@
-
+bash:
+=================================
 pi@raspberrypi:~/mqtt-monitor/mqtt-gpio-monitor-master $ mosquitto_sub -v  -h 192.168.1.8 -t '#'
 
 
 pi@raspberrypi:~/mqtt-monitor/mqtt-gpio-monitor-master $ mosquitto_pub -h 192.168.1.8 -t '/mqtt-gpio-monitor/in/36' -m '1'
 pi@raspberrypi:~/mqtt-monitor/mqtt-gpio-monitor-master $ mosquitto_pub -h 192.168.1.8 -t '/mqtt-gpio-monitor/in/36' -m '0'
+
+
+
+fhem
+=================================
+Q: https://wiki.fhem.de/wiki/MQTT_Einf%C3%BChrung
+
+fhem:> define Broker_8 MQTT 192.168.1.8:1883
+fhem:> define  MQTT_8_Pin36 MQTT_DEVICE
+
+fhem:> attr  MQTT_8_Pin36 subscribeReading_out /mqtt-gpio-monitor/out/36
+fhem:> attr  MQTT_8_Pin36 publishSet_out /mqtt-gpio-monitor/in/36
+fhem:> attr  MQTT_8_Pin36  subscribeReading_in /mqtt-gpio-monitor/in/36
